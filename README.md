@@ -18,8 +18,8 @@ because we want the script to be as portable as possible.
 
 ## Tracking
 
-Command: ruby-stable-version
-Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
-License: BSD, MIT, GPL
-Created: 2014-12-06
-Updated: 2016-09-02
+* Command: ruby-stable-version
+* Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+* License: BSD, MIT, GPL
+* Created: 2014-12-06
+* Updated: 2016-09-02
