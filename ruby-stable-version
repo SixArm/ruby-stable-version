@@ -19,12 +19,22 @@
 # ## Tracking
 #
 # Command: ruby-stable-version
-# Version: 2.0.0
+# Version: 2.1.0
 # Created: 2014-12-06
-# Updated: 2016-09-02
+# Updated: 2016-09-03
 # License: BSD, MIT, GPL
 # Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
 set -euf
+
+## Helpers
+cmd() { command -v $1 >/dev/null 2>&1 }
+die () { >&2 printf %s\\n "$*" ; exit 1 ; }
+
+## Prerequisites
+cmd curl || die "Command 'curl' is unknown"
+cmd sed  || die "Command 'sed' is unknown"
+
+## Main
 curl --silent --location https://www.ruby-lang.org/en/downloads/ |
-sed --silent '/.*ruby-\(.*\).tar.gz.*/{s//\1/p;q}'
+sed -n '/.*ruby-\(.*\).tar.gz.*/{s//\1/p;q}'
