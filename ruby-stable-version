@@ -28,8 +28,8 @@
 set -euf
 
 ## Helpers
-cmd() { command -v $1 >/dev/null 2>&1 }
-die () { >&2 printf %s\\n "$*" ; exit 1 ; }
+cmd() { command -v "$1" >/dev/null 2>&1 ; }
+die() { >&2 printf %s\\n "$*" ; exit 1 ; }
 
 ## Prerequisites
 cmd curl || die "Command 'curl' is unknown"
